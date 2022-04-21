@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "DeX Freerice",
+  "name": "FreeRice AutoFarm",
   "description": "AutoFarm rice at freerice.com.",
   "version": "1",
   "author": "Dex",
@@ -20,6 +20,6 @@
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": "favicon48.png",
-    "default_title": "El Pais Article Hack"
+    "default_title": "FreeRice AutoFarm"
   }
 }
