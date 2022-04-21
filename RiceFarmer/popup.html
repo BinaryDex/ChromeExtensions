@@ -1,16 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Freerice AutoFarm (by dex)</title>
+  <title>FreeRice AutoFarm (made by dex)</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <style>
+    /* Modal Structure */
+
+    html,
+    body {
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      margin: 0;
+      min-height: 180px;
+      padding: 0;
+      width: 384px;
+    }
+
+    h1 {
+      font-family: "Menlo", monospace;
+      font-size: 22px;
+      font-weight: 400;
+      margin: 0;
+      color: #2f5876;
+    }
+
+    a:link,
+    a:visited {
+      color: #000000;
+      outline: 0;
+      text-decoration: none;
+    }
+
+    img {
+      width: 30px;
+    }
+
+    .modal-header {
+      align-items: center;
+      border-bottom: 0.5px solid #dadada;
+    }
+
+    .modal-content {
+      padding: 0 22px;
+    }
+
+    .modal-icons {
+      border-top: 0.5px solid #dadada;
+      height: 50px;
+      width: 100%;
+    }
+
+    .logo {
+      padding: 16px;
+    }
+
+    .logo-icon {
+      vertical-align: text-bottom;
+      margin-right: 12px;
+    }
+
+    .version {
+      color: #444;
+      font-size: 18px;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 22px;
+    }
+
+    .button {
+  border-radius: 4px;
+  background-color: #e90af5;
+  border: none;
+  color: #FFFFFF;
+  font-size: 17px;
+  padding: 7px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 1px;
+}
+
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 25px;
+    }
+
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    .slider {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+  </style>
 </head>
+
 <body>
-  <span>Speed</span>
-  <input type="range" id="IntrSct" min="300" max="2000" step="25" value="1000">
-  <label for="IntrSct" id="Intr">1000</label>
-  <hr>
-  <button id="IntrClk">AutoFarm Rice</button>
+  <div class="modal-header">
+    <h1 class="logo">FreeRice AutoFarm
+      <span class="version">(1.0)</span>
+    </h1>
+  </div>
+  <div class="modal-content">
+    <p>Automatically gain rice at freerice.com</p>
+  </div>
+  <div class="modal-icons">
+    <div class="flex-container">
+      <div class="flex">
+        <input type="range" min="1" max="2000" step="25" value="1000" class="slider" id="IntrSct">
+        <button id="IntrClk" class="button"><span>AutoFarm </span></button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
-  <script src="popup.js"></script>
+<script src="popup.js"></script>
 </html>
